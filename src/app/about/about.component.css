@@ -1,0 +1,218 @@
+.about {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5rem;
+    padding-bottom: 7rem;
+}
+
+.about .about__left {
+    max-width: 27rem;
+}
+
+.about .about__left h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.about .about__left p {
+    margin: 1rem 0;
+}
+
+.about .about__left ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about .about__left ul li {
+    text-align: center;
+    list-style: none;
+}
+
+.about .about__left ul li a {
+    display: inline-block;
+    padding: 1rem;
+    text-align: center;
+    opacity: 0.7;
+    transition: 0.3s ease-in-out;
+}
+
+.about .about__left ul li img {
+    max-width: 46px;
+    border-radius: 8px;
+}
+
+.about .about__left ul li a img {
+    box-shadow: -5px 4px 8px rgba(0, 0, 0, 0.39);
+    transition: transform 0.3s ease-in-out;
+}
+
+.about .about__left ul li a:hover {
+    transform: scale(1.06);
+    opacity: 1;
+    
+}
+
+.about .about__left ul li p {
+    margin-top: -10px;
+    opacity: 0;
+    transition: .4s ease-in-out;
+    font-size: 14px;
+    color: black;
+}
+
+.about .about__left ul li:hover p {
+    opacity: 1;
+    transform: scale(1.10);
+}
+
+.about .about__right {
+    max-width: 40rem;
+}
+
+.about__right h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 3rem;
+    color: var(--primary-color);
+    padding-bottom: 1.5rem;
+}
+
+.about__right p {
+    font-size: 1rem;
+    line-height: 2.5rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .about {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 5rem;
+    }
+
+    .about .about__right {
+        width: 80%;
+    }
+
+    .about .about__right p {
+        font-size: 14pt;
+    }
+
+    .about .about__left {
+        margin-left: 1px;
+        max-width: 80%;
+    }
+    
+    .about .about__left ul {
+        display: flex;
+    }
+
+    .about .about__left ul li {
+        display: flex;
+        justify-content: center;
+        width: 30%;
+    }
+
+    .about .about__left ul li a {
+        width: 100%;
+        opacity: 1;
+    }
+
+    .about .about__left ul li img {
+        width: 5rem;
+    }
+
+    .about .about__left ul li p {
+        display: none;
+    }
+
+    .about .about__left h2 {
+        font-size: 18pt;
+    }
+
+    .about .about__left p {
+        font-size: 14pt;
+    }
+}
+
+.about.dark-theme .about__left ul li a {
+    opacity: 1;
+}
+
+.about.dark-theme .about__left ul li img {
+    filter: invert();
+    box-shadow: none;
+}
+
+.about.dark-theme .about__left ul li p {
+    color: white;
+}
+
+.icon {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    transition: background-image 0.3s ease-in-out;
+}
+
+.about.dark-theme .about__left ul li .icon {
+    filter: invert(1);
+}
+
+.instagram {
+    background-image: url('../../../public/assets/instagram.png');
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.116) -20px -5px 30px 0, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(0, 0, 0, 0.39) 0px -2px 6px 0px inset;
+}
+
+.instagram:hover {
+    background-image: url('../../../public/assets/instagram-color.png');
+    box-shadow: rgba(0, 0, 0, 0.116) -20px -5px 30px 0, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(0, 0, 0, 0.39) 0px -2px 6px 0px inset;
+}
+
+.about.dark-theme .about__left ul li .instagram {
+    box-shadow: none;
+    background-image: url('../../../public/assets/instagram.png');
+}
+
+.linkedin {
+    background-image: url('../../../public/assets/linkedin-invert.png');
+    width: 46px;
+    height: 46px;
+    border-radius: 10px;
+}
+
+.linkedin:hover {
+    background-image: url('../../../public/assets/linkedin-color.png');
+    box-shadow: rgba(0, 0, 0, 0.116) -20px -5px 30px 0, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(0, 0, 0, 0.39) 0px -2px 6px 0px inset;
+}
+
+.about.dark-theme .about__left ul li .linkedin {
+    box-shadow: none;
+}
+
+.about.dark-theme .about__left ul li .linkedin:hover {
+    background-image: url('../../../public/assets/linkedin-invert.png');
+}
+
+.curriculo {
+    background-image: url('../../../public/assets/curriculo.png');
+    border-radius: 10px;
+    width: 46px;
+    height: 46px;
+}
+
+.curriculo:hover {
+    background-image: url('../../../public/assets/curriculo-color.png');
+    box-shadow: rgba(0, 0, 0, 0.116) -20px -5px 30px 0, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(0, 0, 0, 0.39) 0px -2px 6px 0px inset;
+}
+
+.about.dark-theme .about__left ul li .curriculo {
+    box-shadow: none;
+}
+
+.about.dark-theme .about__left ul li .curriculo:hover {
+    background-image: url('../../../public/assets/curriculo.png');
+}
