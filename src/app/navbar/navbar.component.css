@@ -1,0 +1,214 @@
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    z-index: 10;
+    background-color: transparent;
+    animation: gradient 10s ease infinite;
+    background: linear-gradient(90deg, #190555, #340ea5, #7b30d0, #190555) no-repeat;
+    background-size: 200% 200%;
+    box-shadow: rgb(0, 0, 0) 0 0 30px;
+  }
+
+  nav .navbar__content {
+    padding: 3rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+  }
+  
+  nav .logo-navbar {
+    width: 120px;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  nav .logo-navbar:hover {
+    transform: rotate(-180deg);
+  }
+  
+  nav .logo-ev {
+    position: absolute;
+    width: 90px;
+    height: 85px;
+    margin-top: 24px;
+    margin-left: -30px;
+    opacity: 0;
+    transition: opacity 0.7s ease-in-out, visibility 0.5s ease-in-out;
+  }
+  
+  
+  .logo-navbar:hover ~ .logo-ev {
+    opacity: 1;
+  }
+  
+  nav .navbar__content .navbar__links li {
+    display: inline-block;
+    align-content: center;
+  }
+  
+  nav .navbar__content .navbar__links li:last-of-type {
+    transform: translateY(5px);
+  }
+  
+  nav .navbar__content .navbar__links li:not(:last-of-type) {
+    margin-right: 0.2rem;
+  }
+  
+  nav .navbar__content .navbar__links a {
+    padding: 1rem;
+    display: inline-block;
+    color: rgb(217, 219, 223);
+    font-size: 15pt;
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+    border-radius: 15px;
+    text-decoration: none;
+  }
+  
+  nav .navbar__content .navbar__links a:hover {
+    color: black;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.116) -20px -5px 30px 0, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(0, 0, 0, 0.39) 0px -2px 6px 0px inset;
+  }
+  
+  nav .navbar__content .navbar__mobile .mobile__links a {
+    color: black;
+  }
+  
+  .navbar.active {
+    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
+  }
+  
+  nav .navbar__content .navbar__mobile,
+  nav .navbar__content .navbar__mobile .mobile__links {
+    display: none;
+  }
+  
+  .container-check input {
+    display: none;
+  }
+  
+  .container-check img {
+    width: 25px;
+    height: 25px;
+    filter: invert();
+    transition: 0.3s ease;
+    margin-top: 5px;
+    cursor: pointer;
+    opacity: 0.7;
+  }
+  
+  .container-check img:hover {
+    opacity: 1;
+  }
+  
+  #checkbox-img {
+    margin-bottom: -5px;
+    margin-right: 10px;
+    margin-left: 5px;
+  }
+
+  .language {
+    position: relative;
+    display: inline-block;
+  }
+  
+  #language-img {
+    width: 25px;
+    height: 25px;
+    filter: invert();
+    transition: opacity 0.3s ease;
+    margin-top: 5px;
+    cursor: pointer;
+    opacity: 0.7;
+  }
+  
+  #language-img:hover {
+    opacity: 1;
+  }
+  
+  .language-menu {
+    display: none;
+    position: absolute;
+    top: 100%; /* Position it just below the image */
+    left: 0;
+    list-style: none;
+    margin-left: -1.4rem;
+    padding: 0;
+    background-color: #fff; /* Background color of the dropdown */
+    border: 1px solid #ccc; /* Border color of the dropdown */
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.116) -20px -5px 30px 0, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(0, 0, 0, 0.39) 0px -2px 6px 0px inset;
+    z-index: 1000; /* Ensures it appears above other content */
+  }
+
+  .language-menu.dark-theme {
+    background-color: #1d1d1d; /* Background color of the dropdown */
+    box-shadow: rgba(0, 0, 0, 0.116) -20px -5px 30px 0, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(0, 0, 0, 0.767) 0px -2px 6px 0px inset;
+    border-radius: 15px;
+    border: none;
+  }
+  
+  .language-menu li:not(:first-child) {
+    margin-top: -20px;
+  }
+
+  .language-menu li:hover > * {
+    filter: brightness(0.8);
+    transition: 0.3s ease-in-out;
+  }
+  
+  .language-menu li a:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .language:hover .language-menu {
+    display: block;
+  }
+
+.brazil {
+    background-image: url('../../../public/assets/brasil.png');
+    cursor: pointer;
+    transform: scale(0.8);
+}
+
+.english {
+    background-image: url('../../../public/assets/english.png');
+    cursor: pointer;
+    transform: scale(0.8);
+}
+
+.spanish {
+    background-image: url('../../../public/assets/spanish.png');
+    cursor: pointer;
+    transform: scale(0.8);
+}
+
+.french {
+    background-image: url('../../../public/assets/french.png');
+    cursor: pointer;
+    transform: scale(0.8);
+}
+
+.japanese {
+    background-image: url('../../../public/assets/japanese.png');
+    cursor: pointer;
+    transform: scale(0.8);
+}
+
+  @keyframes gradient {
+    0% {
+      background-position: 0 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0 50%;
+    }
+  }
+  

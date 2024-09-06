@@ -1,0 +1,35 @@
+/* * {
+  font-family: 'Poppins', sans-serif;
+} */
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15rem;
+  margin-top: 10rem;
+}
+
+.header__left {
+  width: fit-content;
+  max-width: 570px;
+  color: var(--primary-color);
+  background-color: red;
+}
+
+.header__left h1 {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.header__right img {
+  max-width: 300px;
+  border-radius: 65% 35% 65% 35% / 35% 65% 35% 65%;
+  animation: gradient 10s ease infinite;
+  background: linear-gradient(90deg, #190555, #340ea5, #7b30d0, #190555) no-repeat;
+  background-size: 300% 200%;
+  filter: brightness(110%);
+  filter: contrast(135%);
+  transition: 0.5s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.445) -30px 10px 30px;
+}
